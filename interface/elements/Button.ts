@@ -1,6 +1,6 @@
 import { C, Colors } from "../Color"
 
-type Size = "xs" | "sm" | "md" | "lg" | "xl";
+export type Size = "xs" | "sm" | "md" | "lg" | "xl";
 type BthType = "submit" | "button";
 type Variant = "outlined" | "contained";
 

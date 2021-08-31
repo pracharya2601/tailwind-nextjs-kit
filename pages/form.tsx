@@ -23,7 +23,7 @@ const Form = () => {
     console.log(e.target.checked)
   }
   return (
-    <div className="dark w-screen h-screen">
+    <div className="w-screen h-screen">
       <div className="dark:bg-black">
         <div className="w-full sm:w-72 py-3 m-auto">
           {/* <Input label="Select Time" value={date} onChange={handleChange} type="time" /> */}

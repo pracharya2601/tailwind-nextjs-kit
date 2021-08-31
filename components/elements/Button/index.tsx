@@ -15,15 +15,15 @@ const colors: BtnColors = {
 };
 
 const varianntColor: BtnColors = {
-  white: 'bg-opacity-0 border-white-600 text-white-600 hover:text-white',
-  gray: 'bg-opacity-0 border-gray-600 text-gray-600 hover:text-white',
-  red: 'bg-opacity-0 border-red-600 text-red-600 hover:text-white',
-  yellow: 'bg-opacity-0 border-yellow-600 text-yellow-600 hover:text-white',
-  green: 'bg-opacity-0 border-green-600 text-green-600 hover:text-white',
-  blue: 'bg-opacity-0 border-blue-600 text-blue-600 hover:text-white',
-  indigo: 'bg-opacity-0 border-indigo-600 text-indigo-600 hover:text-white',
-  purple: 'bg-opacity-0 border-purple-600 text-purple-600 hover:text-white',
-  pink: 'bg-opacity-0 border-pink-600 text-pink-600 hover:text-white',
+  white: 'bg-opacity-0 border-white-600 text-white hover:text-gray-500 hover:bg-gray-300',
+  gray: 'bg-opacity-0 border-gray-600 text-gray-400 hover:text-white',
+  red: 'bg-opacity-0 border-red-600 text-red-500 hover:text-white',
+  yellow: 'bg-opacity-0 border-yellow-600 text-yellow-500 hover:text-white',
+  green: 'bg-opacity-0 border-green-600 text-green-500 hover:text-white',
+  blue: 'bg-opacity-0 border-blue-600 text-blue-500 hover:text-white',
+  indigo: 'bg-opacity-0 border-indigo-600 text-indigo-500 hover:text-white',
+  purple: 'bg-opacity-0 border-purple-600 text-purple-500 hover:text-white',
+  pink: 'bg-opacity-0 border-pink-600 text-pink-500 hover:text-white',
 }
 const ontlineBorderVariant: BtnSizes = {
   xs: "border-2",
@@ -55,6 +55,7 @@ const iconSizeVariant: BtnSizes = {
   xl: "py-4 px-10 h-20 w-20",
 }
 
+
 const Button = ({ rounded, color = "blue", icon, disabled, type, size = "md", label, onClick, customClass, variant = "contained", fullwidth = false }: ButtonProps) => {
   return (
     <button
@@ -71,7 +72,7 @@ const Button = ({ rounded, color = "blue", icon, disabled, type, size = "md", la
           [sizeVariant[size]]: size && label,
           [customClass]: customClass,
           [colors[color]]: color,
-          "w-full": label && fullwidth,
+          "flex-1": label && fullwidth,
           [iconSizeVariant[size]]: !label && icon,
           "pr-5": icon && label,
           'opacity-70 cursor-not-allowed': disabled,
